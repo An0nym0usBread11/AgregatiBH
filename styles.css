@@ -60,11 +60,16 @@ body {
 }
 
 .image-placeholder::after {
-    content: "Image";
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #777;
     font-weight: 500;
+}
+
+.grid .w-full img {
+    height: 400px; /* Adjust this value as needed */
+    object-fit: cover; /* Ensures the image fits within the height without distortion */
+    width: 100%; /* Ensures the image spans the full width */
 }
