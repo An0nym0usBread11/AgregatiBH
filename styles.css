@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -72,4 +73,8 @@ body {
     height: 400px; /* Adjust this value as needed */
     object-fit: cover; /* Ensures the image fits within the height without distortion */
     width: 100%; /* Ensures the image spans the full width */
+}
+
+.fmt-reklama {
+    border-radius: 2%;
 }
