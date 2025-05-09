@@ -40,3 +40,41 @@ const animateOnScroll = () => {
 }
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('load', animateOnScroll);
+
+// clipboard
+
+const FILE_SPANS = document.querySelectorAll(`.file-path, .folder-path`);
+
+Array.from(FILE_SPANS).forEach(span => {
+    span.addEventListener(`click`, event => {
+        const COPY_TEXT = event.target.innerText;
+    
+        navigator.clipboard.writeText(COPY_TEXT).then(() => {
+
+        });
+    });
+});
+
+// Input validation
+function validateForm() {
+    var a, b, c, d;
+
+    a = document.forms["name"]["inputy"].value;
+    b = document.forms["mail"]["inputy"].value;
+    c = document.forms["tema"]["inputy"].value;
+    d = document.forms["tekst"]["inputy"].value;
+
+    if (a == "" || b == "" || c == "" || d == "") {
+        alert("Form must be filled out");
+        return false;
+    }
+}
+
+function copy() {
+var x = document.getElementById("notification");
+  if (x.style.opacity = 0) {
+    x.style.opacity = 1;
+  } else {
+    x.style.opacity = 0;
+  }
+} 

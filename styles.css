@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-@import "tailwindcss";
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -42,6 +41,11 @@ body {
     to { opacity: 1; }
 }
 
+@keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
 .btn-primary {
     background-color: #e67e22;
     transition: all 0.3s ease;
@@ -77,4 +81,44 @@ body {
 
 .fmt-reklama {
     border-radius: 2%;
+}
+
+.file-path, .folder-path {
+    transition: all 0.3s;
+    border-radius: 5px;
+
+     &:hover {
+        cursor: pointer;
+        background-color: #e67e22;
+        color:#e0e0e0;
+    }
+}
+
+.location {
+    transition: all 0.3s;
+    border-radius: 5px;
+
+     &:hover {
+        cursor: pointer;
+        background-color: #e67e22;
+        color:#e0e0e0;
+    }
+}
+
+.space-y-6 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.notification {
+    position: fixed;
+    bottom: 40px;
+    margin-left: 45%;
+    margin-right: 50%;
+    display: none;
+    z-index: 1;
+    border-width: 2px;
+    border-color: #96fa44;
+    background-color: #96fa44;
+    border-radius: 7px;
 }
